@@ -115,6 +115,21 @@ function filtrarAuto() { // Función de alto nivel
 
     //console.log(resultado)
     mostrarAutos(resultado);
+    if( resultado.length ) {
+        mostrarAutos(resultado);
+    } else {
+        noResultado();
+    }
+}
+
+function noResultado() {
+
+    limpiarHTML();
+
+    const noResultado = document.createElement('div');
+    noResultado.classList.add('alerta', 'error');
+    noResultado.textContent = 'No hay Resultado, Intente con otros terminos de busqueda';
+    resultado.appendChild(noResultado);
 }
 
 function filtrarMarca(auto) {
