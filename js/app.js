@@ -72,6 +72,9 @@ color.addEventListener('change', e => {
 
 //Funciones
 function mostrarAutos(autos) {
+
+    limpiarHTML(); // Elimina el HTML previo
+
     autos.forEach( auto => {
 
         const { marca, modelo, year, puertas, transmision, precio, color } = auto;
@@ -85,6 +88,13 @@ function mostrarAutos(autos) {
         // Insertar en el HTML
         resultado.appendChild(autoHTML)
     })
+}
+
+// Limpiar HTML
+function limpiarHTML(){
+    while(resultado.firstChild) {
+        resultado.removeChild(resultado.firstChild);
+    }
 }
 
 // Genera los años del select
