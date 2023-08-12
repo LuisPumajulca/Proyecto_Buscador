@@ -39,6 +39,44 @@ marca.addEventListener('change', e => {
     console.log(`Marca: ${e.target.value}`);
 })
 
+// Event listener para los select de búsqueda
+marca.addEventListener('change', e => {
+    datosBusqueda.marca = e.target.value;
+
+    console.log(datosBusqueda);
+})
+year.addEventListener('change', e => {
+    datosBusqueda.year = e.target.value;
+
+    console.log(datosBusqueda)
+})
+minimo.addEventListener('change', e => {
+    datosBusqueda.minimo = e.target.value;
+
+    console.log(datosBusqueda)
+})
+maximo.addEventListener('change', e => {
+    datosBusqueda.maximo = e.target.value;
+
+    console.log(datosBusqueda)
+})
+puertas.addEventListener('change', e => {
+    datosBusqueda.puertas = e.target.value;
+
+    console.log(datosBusqueda)
+})
+transmision.addEventListener('change', e => {
+    datosBusqueda.transmision = e.target.value;
+
+    console.log(datosBusqueda)
+})
+color.addEventListener('change', e => {
+    datosBusqueda.color = e.target.value;
+
+    console.log(datosBusqueda)
+})
+
+
 
 //Funciones
 function mostrarAutos() {
